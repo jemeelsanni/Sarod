@@ -174,11 +174,10 @@ export default function GalleryPage() {
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
                 whileTap={{ scale: 0.96 }}
-                className={`relative flex-shrink-0 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 focus:outline-none ${
-                  activeCategory === cat
+                className={`relative flex-shrink-0 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 focus:outline-none ${activeCategory === cat
                     ? 'bg-blue-600 text-white shadow-md shadow-blue-500/30'
                     : 'text-slate-500 hover:text-slate-900 hover:bg-slate-100'
-                }`}
+                  }`}
               >
                 {cat}
                 <span className={`ml-1.5 text-[11px] font-bold ${activeCategory === cat ? 'text-blue-200' : 'text-slate-400'}`}>
@@ -251,7 +250,6 @@ export default function GalleryPage() {
             className="gap-4"
             style={{
               columns: 'var(--cols)',
-              // @ts-expect-error CSS custom properties
               '--cols': '2',
             } as React.CSSProperties}
           >
